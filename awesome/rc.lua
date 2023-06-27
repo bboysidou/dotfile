@@ -353,18 +353,22 @@ globalkeys = gears.table.join(
 		awful.util.spawn("rofi -show drun")
 	end, { description = "run prompt", group = "launcher" }),
 
+	awful.key({ modkey }, "x", function()
+		awful.util.spawn("sh /home/sidouxp3/.config/rofi/powermenu/powermenu.sh")
+	end, { description = "power menu", group = "launcher" }),
+
 	awful.key({ modkey, "Shift" }, "x", function()
 		awful.util.spawn("sh /home/sidouxp3/.config/screen-lock/lock.sh")
 	end, { description = "lock screen", group = "launcher" }),
 
-	awful.key({ modkey }, "x", function()
-		awful.prompt.run({
-			prompt = "Run Lua code: ",
-			textbox = awful.screen.focused().mypromptbox.widget,
-			exe_callback = awful.util.eval,
-			history_path = awful.util.get_cache_dir() .. "/history_eval",
-		})
-	end, { description = "lua execute prompt", group = "awesome" }),
+	-- awful.key({ modkey }, "x", function()
+	-- 	awful.prompt.run({
+	-- 		prompt = "Run Lua code: ",
+	-- 		textbox = awful.screen.focused().mypromptbox.widget,
+	-- 		exe_callback = awful.util.eval,
+	-- 		history_path = awful.util.get_cache_dir() .. "/history_eval",
+	-- 	})
+	-- end, { description = "lua execute prompt", group = "awesome" }),
 	-- Menubar
 	awful.key({ modkey }, "p", function()
 		menubar.show()

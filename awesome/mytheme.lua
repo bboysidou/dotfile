@@ -11,6 +11,7 @@ local mycolorscheme = {
 	cyan = "#56b6c2",
 	white = "#abb2bf",
 	gray = "#5c6370",
+	all_white = "#FFFFFF",
 }
 
 -- Apply colors to theme
