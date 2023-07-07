@@ -22,20 +22,24 @@ mason.setup()
 mason_lspconfig.setup({
   -- list of servers for mason to install
   ensure_installed = {
-    "tsserver",
-    "html",
-    "cssls",
+	  "tsserver",
+	  "eslint",
+	  "rust_analyzer",
+	  "pyright",
+	  "cssls",
+	  "cssmodules_ls",
+	  "docker_compose_language_service",
+	  "dockerls",
+	  "emmet_ls",
+	  "graphql",
+	  "html",
+	  "jsonls",
     "lua_ls",
     "emmet_ls",
-    "dockerls",
-    "docker_compose_language_service",
-    "jsonls",
-    "yamlls"
   },
   -- auto-install configured servers (with lspconfig)
   automatic_installation = true, -- not the same as ensure_installed
 })
-
 
 mason_null_ls.setup({
   -- list of formatters & linters for mason to install

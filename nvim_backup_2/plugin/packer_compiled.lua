@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -93,6 +98,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
   ["cmp-path"] = {
     loaded = true,
@@ -124,15 +134,10 @@ _G.packer_plugins = {
     path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["lspkind.nvim"] = {
+  ["lsp-zero.nvim"] = {
     loaded = true,
-    path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
-    url = "https://github.com/onsails/lspkind.nvim"
-  },
-  ["lspsaga.nvim"] = {
-    loaded = true,
-    path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
+    path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
+    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -206,40 +211,30 @@ _G.packer_plugins = {
     path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["telescope-fzf-native.nvim"] = {
-    loaded = true,
-    path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
-    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["typescript.nvim"] = {
+  ["tokyonight.nvim"] = {
     loaded = true,
-    path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/typescript.nvim",
-    url = "https://github.com/jose-elias-alvarez/typescript.nvim"
+    path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
+  undotree = {
+    loaded = true,
+    path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
   },
   vim = {
     loaded = true,
     path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/vim",
     url = "https://github.com/rainglow/vim"
   },
-  ["vim-ReplaceWithRegister"] = {
+  ["vim-bbye"] = {
     loaded = true,
-    path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/vim-ReplaceWithRegister",
-    url = "https://github.com/inkarkat/vim-ReplaceWithRegister"
-  },
-  ["vim-maximizer"] = {
-    loaded = true,
-    path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/vim-maximizer",
-    url = "https://github.com/szw/vim-maximizer"
-  },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/vim-surround",
-    url = "https://github.com/tpope/vim-surround"
+    path = "/home/sidouxp3/.local/share/nvim/site/pack/packer/start/vim-bbye",
+    url = "https://github.com/moll/vim-bbye"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,
