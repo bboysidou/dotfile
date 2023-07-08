@@ -2,7 +2,7 @@ local status_ok, bufferline = pcall(require, "bufferline")
 if not status_ok then
 	return
 end
-
+vim.opt.termguicolors = true
 bufferline.setup({
 	options = {
 		numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
@@ -15,8 +15,8 @@ bufferline.setup({
 		-- as an escape hatch for people who cannot bear it for whatever reason
 		indicator_icon = nil,
 		indicator = { style = "icon", icon = "▎" },
-		buffer_close_icon = "",
-		-- buffer_close_icon = '',
+		-- buffer_close_icon = "",
+		buffer_close_icon = "",
 		modified_icon = "●",
 		close_icon = "",
 		-- close_icon = '',
@@ -65,6 +65,7 @@ bufferline.setup({
 		-- can also be a table containing 2 custom separators
 		-- [focused and unfocused]. eg: { '|', '|' }
 		separator_style = "thick", -- | "thick" | "thin" | { 'any', 'any' },
+		-- separator_style = "slant", -- | "thick" | "thin" | { 'any', 'any' },
 		enforce_regular_tabs = true,
 		always_show_bufferline = true,
 		-- sort_by = 'id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | function(buffer_a, buffer_b)
@@ -74,12 +75,16 @@ bufferline.setup({
 	},
 	highlights = {
 		fill = {
-			-- fg = { attribute = "fg", highlight = "TabLineSel" },
+			fg = { attribute = "fg", highlight = "TabLineSel" },
 			bg = { attribute = "bg", highlight = "TabLineSel" },
+			-- guifg = "#100e23",
+			-- guibg = "#87DFEB",
 		},
 		background = {
 			fg = { attribute = "fg", highlight = "TabLine" },
 			bg = { attribute = "bg", highlight = "TabLine" },
+			-- guifg = "#100e23",
+			-- guibg = "#87DFEB",
 		},
 
 		-- buffer_selected = {
@@ -90,6 +95,8 @@ bufferline.setup({
 		buffer_visible = {
 			fg = { attribute = "fg", highlight = "TabLine" },
 			bg = { attribute = "bg", highlight = "TabLine" },
+			-- guifg = "#100e23",
+			-- guibg = "#87DFEB",
 		},
 
 		close_button = {
@@ -114,7 +121,7 @@ bufferline.setup({
 			bg = { attribute = "bg", highlight = "Pmenu" },
 		},
 		tab_close = {
-			-- fg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
+			-- fg = { attribute = "fg", highlight = "LspDiagnosticsDefaultError" },
 			fg = { attribute = "fg", highlight = "TabLineSel" },
 			bg = { attribute = "bg", highlight = "Normal" },
 		},
