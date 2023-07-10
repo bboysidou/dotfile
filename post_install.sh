@@ -28,6 +28,7 @@ sudo pacman -S a52dec faac faad2 flac jasper lame libdca libdv libmad libmpeg2 l
 # 4- zsh-autosuggestions
 # 5- zsh-syntax-highlighting
 # 6- tmux plugin manager (tpm)
+# 7- copy FontUsed to ~/.fonts   
 
 # FROM AUR (YAY) INSTALL i3lock
 yay -S i3lock-color
