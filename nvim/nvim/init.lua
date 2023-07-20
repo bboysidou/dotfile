@@ -1,0 +1,18 @@
+require("sidouxp3.plugins-setup")
+require("sidouxp3.core.options")
+require("sidouxp3.core.keymaps")
+require("sidouxp3.core.colorscheme")
+-- PLUGINS CONFIG FILES
+require("sidouxp3.plugins.comment")
+require("sidouxp3.plugins.nvim-tree")
+require("sidouxp3.plugins.nvim-cmp")
+require("sidouxp3.plugins.lualine")
+require("sidouxp3.plugins.telescope")
+require("sidouxp3.plugins.autopairs")
+require("sidouxp3.plugins.treesitter")
+require("sidouxp3.plugins.bufferline")
+-- LSP STUFF
+require("sidouxp3.plugins.lsp.mason")
+require("sidouxp3.plugins.lsp.lspsaga")
+require("sidouxp3.plugins.lsp.lspconfig")
+require("sidouxp3.plugins.lsp.null-ls")
