@@ -2,6 +2,7 @@
 vim.g.mapleader = " "
 
 local keymap = vim.keymap -- variable declaration
+keymap.set("x", "<leader>p", '"_dP') -- past without overriding the register
 keymap.set("n", "<A-down>", ":m .+1<CR>==") -- move line up(n)
 keymap.set("n", "<A-up>", ":m .-2<CR>==") -- move line down(n)
 keymap.set("v", "<A-down>", ":m '>+1<CR>gv=gv") -- move line up(v)
