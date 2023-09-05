@@ -32,3 +32,6 @@ sudo pacman -S a52dec faac faad2 flac jasper lame libdca libdv libmad libmpeg2 l
 
 # FROM AUR (YAY) INSTALL i3lock
 yay -S i3lock-color
+
+# SNAPs 
+sudo snap install auto-cpufreq
