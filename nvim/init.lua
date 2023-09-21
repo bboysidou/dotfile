@@ -11,6 +11,7 @@ require("sidouxp3.plugins.telescope")
 require("sidouxp3.plugins.autopairs")
 require("sidouxp3.plugins.treesitter")
 require("sidouxp3.plugins.bufferline")
+require("sidouxp3.plugins.colorizer")
 -- LSP STUFF
 require("sidouxp3.plugins.lsp.mason")
 require("sidouxp3.plugins.lsp.lspsaga")

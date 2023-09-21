@@ -59,7 +59,8 @@ return packer.startup(function(use)
 
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
-	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
+	use("nvim-telescope/telescope-file-browser.nvim") -- fuzzy finder
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
@@ -114,7 +115,7 @@ return packer.startup(function(use)
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
-
+	use("norcalli/nvim-colorizer.lua")
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
