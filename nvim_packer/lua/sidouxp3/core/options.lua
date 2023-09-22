@@ -33,3 +33,4 @@ opt.backspace = "indent,eol,start"
 
 -- editor
 opt.scrolloff = 10
+
