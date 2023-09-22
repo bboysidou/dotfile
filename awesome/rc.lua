@@ -347,9 +347,7 @@ globalkeys = gears.table.join(
 	end, { description = "run File Manager", group = "launcher" }),
 	--SET MONITORS
 	awful.key({ modkey, "Shift" }, "w", function()
-		awful.util.spawn(
-			"xrandr --output DP-0 --off --output DP-1 --off --output DP-2 --mode 1920x1080 --pos 4480x0 --rotate right --output DP-3 --off --output HDMI-0 --mode 1920x1080 --pos 2560x0 --rotate normal --output DP-4 --primary --mode 2560x1600 --pos 0x0 --rotate normal"
-		)
+		awful.spawn.with_shell("sh $HOME/.config/awesome/3_screen.sh")
 	end, { description = "Set Workflow", group = "client" }),
 	-- Prompt
 	--VOLUME
