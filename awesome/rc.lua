@@ -339,7 +339,8 @@ globalkeys = gears.table.join(
 
 	--BROWSER
 	awful.key({ modkey }, "b", function()
-		awful.util.spawn("chromium")
+		awful.util.spawn("brave")
+		-- awful.util.spawn("chromium")
 	end, { description = "run Browser", group = "launcher" }),
 	--FILE MANAGER
 	awful.key({ modkey, "Shift" }, "f", function()
