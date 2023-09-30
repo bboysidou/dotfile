@@ -1,25 +1,40 @@
-sudo pacman -S lxappearance picom nitrogen rofi chromium polybar neovim zsh tmux lightdm lightdm-slick-greeter nodejs npm ntfs-3g docker docker-compose nautilus alsa-utils alsa-plugins alsa-lib alsa-firmware unzip ripgrep gvfs-mtp
+# APP NEEDED TO WINDOW MANAGER WORD PROPERLLY
+sudo pacman -S lxappearance picom nitrogen rofi dunst firefox chromium polybar neovim \
+  zsh tmux ntfs-3g \
+  nautilus unzip ripgrep gvfs-mtp net-tools arandr mtpfs neofetch usbutils autorandr numlockx\
+  udisks2 udiskie acpi
 
 # ENABLE LIGHTDM ON START AND UPDATE GRETTER
+sudo pacman -S lightdm lightdm-slick-greeter
 sudo systemctl enable lightdm.service
 
 # CHNAGE THE GREETER TO lightdm-slick-greeter
 # -- sudo vim /etc/lightdm/lightdm.conf
 
+# NODE NPM
+sudo pacman -S nodejs npm 
+
 # MAKE DOCKER RUN WITHOUT SUDO
+sudo pacman -S docker docker-compose 
 sudo usermod -aG docker $USER
 
 # BLUETOOTH
 sudo pacman -S bluez bluez-utils blueberry
 
 # FIRMWARE AND LINUX HEADERS
-sudo pacman -S linux-firmware linux-firmware-marvell linux-firmware-qlogic linux linux-headers mesa-utils
+sudo pacman -S linux-firmware linux-firmware-marvell linux-firmware-qlogic \
+  linux linux-headers mesa-utils 
+
+# FOR AMD CPU
+sudo pacman -S amd-ucode
 
 # IF GPU IS NVIDIA
-sudo pacman -S nvidia nvidia-utils nvidia-settings nvidia-dkms
+sudo pacman -S nvidia nvidia-utils nvidia-settings nvidia-dkms nvidia-prime
 
 # VIDEO AUDIO CODECS
-sudo pacman -S a52dec faac faad2 flac jasper lame libdca libdv libmad libmpeg2 libtheora libvorbis libxv wavpack x264 xvidcore vlc
+sudo pacman -S alsa-utils alsa-plugins alsa-lib alsa-firmware \
+  a52dec faac faad2 flac jasper lame libdca libdv libmad libmpeg2 libtheora \
+  libvorbis libxv wavpack x264 xvidcore vlc ffmpeg pavucontrol
 
 # STEPS
 # 1- INSTALL YAY AND SNAPD
@@ -32,6 +47,18 @@ sudo pacman -S a52dec faac faad2 flac jasper lame libdca libdv libmad libmpeg2 l
 
 # FROM AUR (YAY) INSTALL i3lock
 yay -S i3lock-color
+yay -S optimus-manager
+yay -S i3lock-color
+
+# OPTIMUS MANAGER
+copy optimus-manager.conf => /etc/optimus-manager
 
 # SNAPs 
 sudo snap install auto-cpufreq
+sudo snap install android-studio --classic
+sudo snap install sublime-text --classic
+sudo snap install flutter --classic
+sudo snap install brave
+
+# PACKAGE INSTALLED 
+see sidou_arch.txt
