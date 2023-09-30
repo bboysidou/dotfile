@@ -11,7 +11,7 @@ local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
-local naughty = require("naughty")
+-- local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
@@ -21,37 +21,37 @@ require("awful.hotkeys_popup.keys")
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
-if awesome.startup_errors then
-	naughty.notify({
-		preset = naughty.config.presets.critical,
-		title = "Oops, there were errors during startup!",
-		text = awesome.startup_errors,
-	})
-end
-
--- Handle runtime errors after startup
-do
-	local in_error = false
-	awesome.connect_signal("debug::error", function(err)
-		-- Make sure we don't go into an endless error loop
-		if in_error then
-			return
-		end
-		in_error = true
-
-		naughty.notify({
-			preset = naughty.config.presets.critical,
-			title = "Oops, an error happened!",
-			text = tostring(err),
-		})
-		in_error = false
-	end)
-end
+-- if awesome.startup_errors then
+-- 	naughty.notify({
+-- 		preset = naughty.config.presets.critical,
+-- 		title = "Oops, there were errors during startup!",
+-- 		text = awesome.startup_errors,
+-- 	})
+-- end
+--
+-- -- Handle runtime errors after startup
+-- do
+-- 	local in_error = false
+-- 	awesome.connect_signal("debug::error", function(err)
+-- 		-- Make sure we don't go into an endless error loop
+-- 		if in_error then
+-- 			return
+-- 		end
+-- 		in_error = true
+--
+-- 		naughty.notify({
+-- 			preset = naughty.config.presets.critical,
+-- 			title = "Oops, an error happened!",
+-- 			text = tostring(err),
+-- 		})
+-- 		in_error = false
+-- 	end)
+-- end
 -- }}}
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/home/sidouxp3/.config/awesome/themes/theme.lua")
+beautiful.init("~/.config/awesome/themes/theme.lua")
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
@@ -353,10 +353,12 @@ globalkeys = gears.table.join(
 	-- Prompt
 	--VOLUME
 	awful.key({ modkey }, "v", function()
-		awful.util.spawn("pactl -- set-sink-volume 0 +5%")
+		awful.spawn.with_shell("sh $HOME/.config/dunst/volum_notification.sh up")
+		-- awful.util.spawn("pactl -- set-sink-volume 0 +5%")
 	end, { description = "Increase Volume", group = "Sound" }),
 	awful.key({ modkey, "Shift" }, "v", function()
-		awful.util.spawn("pactl -- set-sink-volume 0 -5%")
+		awful.spawn.with_shell("sh $HOME/.config/dunst/volum_notification.sh down")
+		-- awful.util.spawn("pactl -- set-sink-volume 0 -5%")
 	end, { description = "Decrease Volume", group = "Sound" }),
 	----------------------------------------
 	awful.key({ modkey }, "r", function()
@@ -364,11 +366,11 @@ globalkeys = gears.table.join(
 	end, { description = "run prompt", group = "launcher" }),
 
 	awful.key({ modkey }, "x", function()
-		awful.util.spawn("sh /home/sidouxp3/.config/rofi/powermenu/powermenu.sh")
+		awful.spawn.with_shell("sh $HOME/.config/rofi/powermenu/powermenu.sh")
 	end, { description = "power menu", group = "launcher" }),
 
 	awful.key({ modkey, "Shift" }, "x", function()
-		awful.util.spawn("sh /home/sidouxp3/.config/screen-lock/lock.sh")
+		awful.spawn.with_shell("sh $HOME/.config/screen-lock/lock.sh")
 	end, { description = "lock screen", group = "launcher" }),
 
 	-- awful.key({ modkey }, "x", function()
