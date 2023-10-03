@@ -59,6 +59,7 @@ sudo snap install android-studio --classic
 sudo snap install sublime-text --classic
 sudo snap install flutter --classic
 sudo snap install brave
+sudo snap install onlyoffice-desktopeditors
 
 # PACKAGE INSTALLED 
 see sidou_arch.txt
