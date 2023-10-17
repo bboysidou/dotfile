@@ -2,7 +2,7 @@
 sudo pacman -S lxappearance picom nitrogen rofi dunst firefox chromium polybar neovim \
   zsh tmux ntfs-3g \
   nautilus unzip ripgrep gvfs-mtp net-tools arandr mtpfs neofetch usbutils autorandr numlockx\
-  udisks2 udiskie acpi dhcpcd
+  udisks2 udiskie acpi dhcpcd fzf zip
 
 # ENABLE LIGHTDM ON START AND UPDATE GRETTER
 sudo pacman -S lightdm lightdm-slick-greeter
@@ -67,3 +67,6 @@ sudo snap install onlyoffice-desktopeditors
 
 # PACKAGE INSTALLED 
 see sidou_arch.txt
+
+# ADD TO .zshrc
+bindkey -s '^[c' 'sh ~/.config/custom_scripts/ssh_connection.sh\n'
