@@ -343,8 +343,8 @@ globalkeys = gears.table.join(
 		-- awful.util.spawn("chromium")
 	end, { description = "run Browser", group = "launcher" }),
 	--FILE MANAGER
-	awful.key({ modkey, "Shift" }, "f", function()
-		awful.util.spawn("nautilus")
+	awful.key({ modkey }, "f", function()
+		awful.util.spawn("thunar")
 	end, { description = "run File Manager", group = "launcher" }),
 	--SET MONITORS
 	awful.key({ modkey, "Shift" }, "w", function()
@@ -388,10 +388,10 @@ globalkeys = gears.table.join(
 )
 
 clientkeys = gears.table.join(
-	awful.key({ modkey }, "f", function(c)
-		c.fullscreen = not c.fullscreen
-		c:raise()
-	end, { description = "toggle fullscreen", group = "client" }),
+	-- awful.key({ modkey }, "f", function(c)
+	-- 	c.fullscreen = not c.fullscreen
+	-- 	c:raise()
+	-- end, { description = "toggle fullscreen", group = "client" }),
 	awful.key({ modkey }, "q", function(c)
 		c:kill()
 	end, { description = "close", group = "client" }),
