@@ -69,4 +69,6 @@ sudo snap install onlyoffice-desktopeditors
 see sidou_arch.txt
 
 # ADD TO .zshrc
+alias tmuxa="sh ~/.config/custom_scripts/tmux_add_session.sh"
 bindkey -s '^[c' 'sh ~/.config/custom_scripts/ssh_connection.sh\n'
+bindkey -s '^t' 'sh ~/.config/custom_scripts/tmux_recover.sh\n'
