@@ -2,7 +2,7 @@
 sudo pacman -S lxappearance picom nitrogen rofi dunst firefox chromium polybar neovim \
   zsh tmux ntfs-3g \
   nautilus unzip ripgrep gvfs-mtp net-tools arandr mtpfs neofetch usbutils autorandr numlockx\
-  udisks2 udiskie acpi dhcpcd fzf zip
+  udisks2 udiskie acpi dhcpcd fzf zip ntp ranger
 
 # ENABLE LIGHTDM ON START AND UPDATE GRETTER
 sudo pacman -S lightdm lightdm-slick-greeter

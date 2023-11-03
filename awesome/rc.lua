@@ -344,6 +344,9 @@ globalkeys = gears.table.join(
 	end, { description = "run Browser", group = "launcher" }),
 	--FILE MANAGER
 	awful.key({ modkey }, "f", function()
+		awful.util.spawn("alacritty -e ranger")
+	end, { description = "run Ranger File Manager", group = "launcher" }),
+	awful.key({ modkey, "Shift" }, "f", function()
 		awful.util.spawn("thunar")
 	end, { description = "run File Manager", group = "launcher" }),
 	--SET MONITORS
@@ -625,6 +628,9 @@ end)
 beautiful.useless_gap = 3
 -- AUTOSTART
 awful.spawn.with_shell("picom --config .config/picom/picom.conf")
--- awful.spawn.with_shell("picom --config .config/picom/picom.conf --experimental-backends")
 awful.spawn.with_shell("nitrogen --restore")
+awful.spawn.with_shell("numlockx")
 awful.spawn.with_shell("sh $HOME/.config/polybar/launch.sh")
+
+-- CHECK WITH YOUR LAPTOP MONITOR FIRST
+-- awful.spawn.with_shell("xrandr --output eDP --primary --mode 2560x1600 --rate 60.00")
