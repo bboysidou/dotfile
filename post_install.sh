@@ -2,7 +2,7 @@
 sudo pacman -S lxappearance picom nitrogen rofi dunst firefox chromium polybar neovim \
   zsh tmux ntfs-3g \
   nautilus unzip ripgrep gvfs-mtp net-tools arandr mtpfs neofetch usbutils autorandr numlockx\
-  udisks2 udiskie acpi dhcpcd fzf zip ntp ranger
+  udisks2 udiskie acpi dhcpcd fzf zip ntp ranger w3m
 
 # ENABLE LIGHTDM ON START AND UPDATE GRETTER
 sudo pacman -S lightdm lightdm-slick-greeter
@@ -68,7 +68,13 @@ sudo snap install onlyoffice-desktopeditors
 # PACKAGE INSTALLED 
 see sidou_arch.txt
 
+# RANGER
+# THIS TO COPY ALL CONFIG FILES TO .config
+ranger --copy-config=all
+# modify rc.conf set preview_image => true
+
 # ADD TO .zshrc
+export RANGER_LOAD_DEFAULT_RC=false
 alias tmuxa="sh ~/.config/custom_scripts/tmux_add_session.sh"
 bindkey -s '^[c' 'sh ~/.config/custom_scripts/ssh_connection.sh\n'
 bindkey -s '^t' 'sh ~/.config/custom_scripts/tmux_recover.sh\n'
