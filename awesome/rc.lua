@@ -356,7 +356,11 @@ globalkeys = gears.table.join(
 	--CUSTOM SCRIPTS
 	awful.key({ "Control" }, "f", function()
 		awful.spawn.with_shell("alacritty -e sh $HOME/.config/custom_scripts/tmux_recover.sh")
-	end, { description = "Set Workflow", group = "client" }),
+	end, { description = "Open Projects", group = "custom scripts" }),
+
+	awful.key({ modkey }, "c", function()
+		awful.spawn.with_shell("alacritty -e sh $HOME/.config/custom_scripts/ssh_connection.sh")
+	end, { description = "Connection to Servers", group = "custom scripts" }),
 	-- Prompt
 	--VOLUME
 	awful.key({ modkey }, "v", function()
