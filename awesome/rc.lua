@@ -353,6 +353,10 @@ globalkeys = gears.table.join(
 	awful.key({ modkey, "Shift" }, "w", function()
 		awful.spawn.with_shell("sh $HOME/.config/awesome/3_screen.sh")
 	end, { description = "Set Workflow", group = "client" }),
+	--CUSTOM SCRIPTS
+	awful.key({ "Control" }, "f", function()
+		awful.spawn.with_shell("alacritty -e sh $HOME/.config/custom_scripts/tmux_recover.sh")
+	end, { description = "Set Workflow", group = "client" }),
 	-- Prompt
 	--VOLUME
 	awful.key({ modkey }, "v", function()
