@@ -2,7 +2,7 @@
 sudo pacman -S lxappearance picom nitrogen rofi dunst firefox chromium polybar neovim \
   zsh tmux ntfs-3g \
   nautilus unzip ripgrep gvfs-mtp net-tools arandr mtpfs neofetch usbutils autorandr numlockx\
-  udisks2 udiskie acpi dhcpcd fzf zip ntp ranger w3m fd mpv pacman-contrib
+  udisks2 udiskie acpi dhcpcd fzf zip ntp ranger w3m fd mpv pacman-contrib cronie
 
 # ENABLE LIGHTDM ON START AND UPDATE GRETTER
 sudo pacman -S lightdm lightdm-slick-greeter
@@ -80,3 +80,11 @@ alias sysupdate="sudo pacman -Syu"
 alias sysclean="paccache -r & sudo pacman -R $(pacman -Qtdq)"
 bindkey -s '^[c' 'sh ~/.config/custom_scripts/ssh_connection.sh\n'
 bindkey -s '^t' 'sh ~/.config/custom_scripts/tmux_recover.sh\n'
+
+# BATTERY NOTIFICATION
+crontab -e
+# add this to 
+*/5 * * * * ~/.config/custom_scripts/battery_notify.sh
+# check the debus and change it in battery_notify.sh with the output of
+echo $DBUS_SESSION_BUS_ADDRESS
+# copy power.rules to /etc/udev/rules.d
