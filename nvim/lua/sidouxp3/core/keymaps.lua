@@ -45,6 +45,7 @@ keymap.set({ "n", "v", "i" }, "<A-f>", ":FlutterOutlineToggle<CR>")
 
 -- dbui
 keymap.set("n", "<leader>db", ":DBUIToggle<CR>")
+
 -- file
 keymap.set("n", "n", "nzzzv") -- search down and center the view
 keymap.set("n", "N", "Nzzzv") -- search up center the view
@@ -54,3 +55,6 @@ keymap.set({ "n", "v", "i" }, "<C-s>", "<ESC>:w<CR>") -- save the file
 keymap.set({ "n", "v", "i" }, "<C-w>", "<ESC>:q!<CR>") -- close the file
 keymap.set({ "n", "v", "i" }, "<C-down>", "5jzz") -- jump 5 down lines
 keymap.set({ "n", "v", "i" }, "<C-up>", "5kzz") -- jump 5 up lines
+
+-- VIM REST CONSOLE
+keymap.set("n", "<C-x>", ":call VrcQuery()<CR>") -- RUN REST QUERY
